@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1.0 - December 7, 2021
+
+- Reset button to remove any style and attributes from image tag restore original size of image
+
 ## v3.0.0 - April 9, 2017
 
 - Position drag handles relative to editor, not document
