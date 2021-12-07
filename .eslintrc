@@ -5,9 +5,10 @@
     "mocha": true,
     "es6": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 8,
+    "requireConfigFile": false,
     "sourceType": "module",
     "ecmaFeatures": {
       "forOf": true,
@@ -15,6 +16,7 @@
       "experimentalObjectRestSpread": true
     }
   },
+  "ignorePatterns": ["webpack.config.js"],
   "rules": {
 	"comma-dangle": [2, "always-multiline"],
 	"default-case": 1,
