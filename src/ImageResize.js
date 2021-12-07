@@ -1,4 +1,4 @@
-import Quill from "quill";
+import Quill from 'quill';
 import defaultsDeep from 'lodash/defaultsDeep';
 import DefaultOptions from './DefaultOptions';
 import { DisplaySize } from './modules/DisplaySize';
@@ -103,7 +103,7 @@ export default class ImageResize {
 		}
 	};
 
-	handleScroll = (evt) => {
+	handleScroll = () => {
 		//Hide the overlay when the editor is scrolled,
 		//otherwise image is no longer correctly aligned with overlay
 		this.hide();

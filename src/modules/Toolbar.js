@@ -2,6 +2,7 @@ import Quill from "quill";
 import IconAlignLeft from 'quill/assets/icons/align-left.svg';
 import IconAlignCenter from 'quill/assets/icons/align-center.svg';
 import IconAlignRight from 'quill/assets/icons/align-right.svg';
+import IconUndo from 'quill/assets/icons/undo.svg';
 import { BaseModule } from './BaseModule';
 
 const Parchment = Quill.imports.parchment;
@@ -65,6 +66,17 @@ export class Toolbar extends BaseModule {
                 },
                 isApplied: () => FloatStyle.value(this.img) == 'right',
             },
+			{
+				icon: IconUndo,
+				apply: () => {
+					DisplayStyle.remove(this.img);
+					FloatStyle.remove(this.img);
+					MarginStyle.remove(this.img);
+					this.img.removeAttribute('align');
+					this.img.removeAttribute('width');
+				},
+				isApplied: () => false,
+			},
         ];
     };
 
